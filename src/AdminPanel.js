@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { FaUserPlus, FaUsers, FaMapMarkedAlt, FaEye, FaUsersCog, FaClipboardList } from "react-icons/fa"; // Import icons
+
 import CreateAgent from "./components/CreateAgent";
 import ViewAgents from "./components/ViewAgents";
 import CreateGuide from "./components/CreateGuide";
@@ -40,7 +42,7 @@ const AdminPanel = () => {
             }`}
             onClick={() => setActiveMenu("createAgent")}
           >
-            Create Agent
+            <FaUserPlus className="inline mr-2" /> Create Agent
           </li>
           <li
             className={`py-2 px-4 hover:bg-gray-700 cursor-pointer ${
@@ -48,7 +50,7 @@ const AdminPanel = () => {
             }`}
             onClick={() => setActiveMenu("viewAgents")}
           >
-            View Agents
+            <FaUsers className="inline mr-2" /> View Agents
           </li>
           <li
             className={`py-2 px-4 hover:bg-gray-700 cursor-pointer ${
@@ -56,7 +58,7 @@ const AdminPanel = () => {
             }`}
             onClick={() => setActiveMenu("createGuide")}
           >
-            Create Guide
+            <FaMapMarkedAlt className="inline mr-2" /> Create Guide
           </li>
           <li
             className={`py-2 px-4 hover:bg-gray-700 cursor-pointer ${
@@ -64,7 +66,7 @@ const AdminPanel = () => {
             }`}
             onClick={() => setActiveMenu("viewGuides")}
           >
-            View Guides
+            <FaEye className="inline mr-2" /> View Guides
           </li>
           <li
             className={`py-2 px-4 hover:bg-gray-700 cursor-pointer ${
@@ -72,7 +74,7 @@ const AdminPanel = () => {
             }`}
             onClick={() => setActiveMenu("viewUsers")}
           >
-            View Users
+            <FaUsersCog className="inline mr-2" /> View Users
           </li>
           <li
             className={`py-2 px-4 hover:bg-gray-700 cursor-pointer ${
@@ -80,7 +82,7 @@ const AdminPanel = () => {
             }`}
             onClick={() => setActiveMenu("viewPackages")}
           >
-            View Packages
+            <FaClipboardList className="inline mr-2" /> View Packages
           </li>
         </ul>
       </div>
